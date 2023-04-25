@@ -8,7 +8,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.bg1100 {
+  display: none;
+}
 .container {
   padding: 0 160px;
 }
@@ -60,10 +62,7 @@ nav .container {
   display: flex;
   align-items: center;
 }
-.nav__col2 a {
-  position: relative;
-  top: 3px;
-}
+
 .nav__col2 li:last-child {
   width: 170px;
   height: 55px;
@@ -72,6 +71,8 @@ nav .container {
   justify-content: center;
   align-items: center;
   margin-left: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .nav__col2 li img {
   position: relative;
@@ -97,7 +98,7 @@ nav li p {
     #1a1a1a 100%
   );
   position: relative;
-  padding-top: 160px;
+  padding-top: 120px;
   padding-bottom: 60px;
 }
 
@@ -209,4 +210,104 @@ nav li p {
   justify-content: space-between;
   width: 90%;
   margin-top: 150px;
+  align-items: center;
+}
+@media screen and (max-width: 1230px) {
+  .container {
+    padding: 0 50px;
+  }
+  .hero--div__col1 .box {
+    width: 600px;
+  }
+  .hero--div__col2 {
+    width: 450px;
+    padding-left: 80px;
+  }
+  .hero--section h1 {
+    font-size: 60px;
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .hero--div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero--div__col2 {
+    margin-left: 0;
+    margin-top: 20px;
+    border-radius: 30px;
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
+  .nav__col2 li:last-child {
+    width: 150px;
+  }
+  .payment--div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .payment--div li {
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  .nav__logo {
+    margin-right: 45px;
+  }
+  .nav__col1 li {
+    margin-right: 40px;
+  }
+  .bg1100 {
+    display: block;
+    object-fit: cover;
+  }
+  .bgNormal {
+    display: none;
+  }
+}
+@media screen and (max-width: 940px) {
+  nav .container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .hero--section {
+    padding-top: 60px;
+  }
+  .hero--section h1 {
+    width: 90%;
+  }
+  .hero--section h2 {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero--div__col1 .box {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .box--description {
+    padding-right: 30px;
+  }
+  .hero--div {
+    width: 100%;
+  }
+  .hero--div__col2,
+  .hero--div__col1 {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .hero--section h1 {
+    font-size: 50px;
+    width: 100%;
+  }
+  .payment--div {
+    margin-top: 50px;
+  }
 }
